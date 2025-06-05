@@ -18,6 +18,10 @@
     select.id = "diffselect";
     select.addEventListener("change", (event) => {updateDifficulty()});
     var option;
+    option = document.createElement("option");
+    option.value = "0";
+    option.appendChild(document.createTextNode("Select difficulty"));
+    select.appendChild(option);
     for (let i = 5; i <= 100; i += 5)
     {
         option = document.createElement("option");
